@@ -1,0 +1,9 @@
+{
+	"printWidth": 120,
+	"singleQuote": true,
+	"tabWidth": 4,
+	"useTabs": true,
+	"arrowParens": "avoid",
+	"bracketSpacing": true,
+	"svelteSortOrder": "options-scripts-styles-markup"
+}
