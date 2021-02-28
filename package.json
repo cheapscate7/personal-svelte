@@ -35,7 +35,7 @@
 		"pretty-quick": "3.1.0",
 		"rollup": "2.3.4",
 		"rollup-plugin-livereload": "2.0.0",
-		"rollup-plugin-svelte": "6.0.0",
+		"rollup-plugin-svelte": "latest",
 		"rollup-plugin-terser": "7.0.0",
 		"svelte": "3.33.0",
 		"svelte-check": "1.0.0",
