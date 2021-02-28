@@ -13,11 +13,22 @@ const Template = args => ({
 export const Default = Template.bind({});
 Default.args = {
 	title: 'Ramona Harrison',
-	outline: 'Home',
 };
 
 export const withUnderline = Template.bind({});
-Default.args = {
+withUnderline.args = {
+	title: 'Ramona Harrison',
+	underline: 'Developer',
+};
+
+export const withOutline = Template.bind({});
+withOutline.args = {
+	title: 'Ramona Harrison',
+	outline: 'Home',
+};
+
+export const withOutlineAndUnderline = Template.bind({});
+withOutlineAndUnderline.args = {
 	title: 'Ramona Harrison',
 	outline: 'Home',
 	underline: 'Developer',
