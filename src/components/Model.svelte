@@ -6,7 +6,6 @@
 	export let name = '';
 	export let title = '';
 	export let subtitle = '';
-	export let body = '';
 
 	let bodyHeight;
 
@@ -15,10 +14,10 @@
 	const toggleExpand = () => (expanded = !expanded);
 </script>
 
-<style>
+<style lang="less">
 	.model-container {
 		background-color: transparent;
-		transition: background-color 200ms ease;
+		transition: transform 200ms ease;
 		display: inline-flex;
 		flex-direction: column;
 		align-items: stretch;
@@ -26,6 +25,10 @@
 		max-width: 200px;
 		background-color: white;
 		box-shadow: 0px 0px 10px 5px rgba(100, 100, 100, 0.1);
+
+		&:hover {
+			transform: scale(1.025);
+		}
 	}
 
 	img {
@@ -51,13 +54,25 @@
 		margin: auto;
 	}
 
+	.content {
+		margin-top: 24px;
+	}
+
+	.italicised {
+		font-style: italic;
+		font-size: 0.8rem;
+		letter-spacing: 0.3px;
+		margin-bottom: 8px;
+		text-align: center;
+	}
+
 	.body {
 		text-align: center;
 		max-height: 150px;
 		overflow: hidden;
 		letter-spacing: 0.3px;
 		box-sizing: content-box;
-		margin: 24px 0 8px;
+		margin: 0 0 8px;
 		font-size: 0.9rem;
 	}
 
@@ -96,9 +111,16 @@
 	<div class="outline-container">
 		<Outline><p>{subtitle}</p></Outline>
 	</div>
-	<p class="body" class:expanded bind:offsetHeight={bodyHeight}>
-		{body}
-	</p>
+	<div class="content">
+		{#if $$slots.italicised}
+			<div class="italicised">
+				<slot name="italicised" />
+			</div>
+		{/if}
+		<div class="body" class:expanded bind:offsetHeight={bodyHeight}>
+			<slot name="body" />
+		</div>
+	</div>
 	{#if !(bodyHeight < 150)}
 		<button class="expand-button" on:click={toggleExpand}>
 			<Chevron width={8} height={8} direction={expanded ? 'top' : 'bottom'} />
