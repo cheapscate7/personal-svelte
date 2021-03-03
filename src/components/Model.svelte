@@ -8,6 +8,7 @@
 	export let subtitle = '';
 
 	let bodyHeight;
+	const defaultImage = '/image-not-found.png';
 
 	let expanded = false;
 
@@ -106,7 +107,7 @@
 </style>
 
 <article class="model-container">
-	<img src={imageSrc} alt={name} />
+	<img src={imageSrc || defaultImage} alt={name} />
 	<h3>{title}</h3>
 	<div class="outline-container">
 		<Outline><p>{subtitle}</p></Outline>

@@ -70,6 +70,7 @@ declare interface Job {
 	location: string;
 	worked_with: string[];
 	description: string;
+	image_src?: string;
 }
 
 declare interface Page {

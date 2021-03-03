@@ -33,6 +33,7 @@
 		column-gap: 8px;
 		row-gap: 16px;
 		justify-items: center;
+		align-items:baseline;
 
 		@media (min-width: 768px) {
 			column-gap: 24px;
@@ -56,7 +57,10 @@
 		<Container full>
 			<div class="jobs-grid">
 				{#each jobs as job}
-					<Model name={job.company_name} subtitle={job.position} body={job.description} />
+					<Model name={job.company_name} subtitle={job.position}>
+						<span slot="italicised">{job.duration[0]} - {job.duration[1] || 'present'}</span>
+						<span slot="body">{job.description}</span>
+					</Model>
 				{/each}
 			</div>
 		</Container>
