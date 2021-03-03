@@ -37,5 +37,5 @@
 {/if}
 <h1 class:noOutline={!outline} class:noUnderline={!underline}>{title}</h1>
 {#if underline}
-	<h2>> {underline}</h2>
+	<h2>{underline}</h2>
 {/if}
