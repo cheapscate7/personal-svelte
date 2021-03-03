@@ -1,6 +1,25 @@
 {
+	"include": ["src", "types"],
 	"extends": "@tsconfig/svelte/tsconfig.json",
-
-	"include": ["src/**/*"],
-	"exclude": ["node_modules/*", "__sapper__/*", "public/*"]
-}
+	"compilerOptions": {
+	  "module": "esnext",
+	  "target": "esnext",
+	  "moduleResolution": "node",
+	  "jsx": "preserve",
+	  "baseUrl": "./",
+	  /* paths - import rewriting/resolving */
+	  "paths": {
+	  },
+	  /* noEmit - Snowpack builds (emits) files, not tsc. */
+	  "noEmit": true,
+	  /* Additional Options */
+	  "strict": true,
+	  "skipLibCheck": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "resolveJsonModule": true,
+	  "useDefineForClassFields": true,
+	  "allowSyntheticDefaultImports": true,
+	  "noImplicitAny": false,
+	  "importsNotUsedAsValues": "error"
+	}
+  }

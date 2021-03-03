@@ -2,9 +2,8 @@
 	"name": "svelte-personal",
 	"private": true,
 	"scripts": {
-		"build": "rollup -c",
-		"dev": "rollup -c -w",
-		"start": "sirv public",
+		"dev": "snowpack dev",
+		"build": "snowpack build",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"validate": "svelte-check",
@@ -13,14 +12,15 @@
 	},
 	"devDependencies": {
 		"@babel/core": "7.13.1",
-		"@rollup/plugin-commonjs": "14.0.0",
-		"@rollup/plugin-node-resolve": "8.0.0",
-		"@rollup/plugin-typescript": "6.0.0",
+		"@snowpack/plugin-dotenv": "^2.0.5",
+		"@snowpack/plugin-svelte": "^3.5.0",
+		"@snowpack/plugin-typescript": "^1.2.0",
 		"@storybook/addon-actions": "6.1.20",
 		"@storybook/addon-essentials": "6.1.20",
 		"@storybook/addon-links": "6.1.20",
 		"@storybook/svelte": "6.1.20",
 		"@tsconfig/svelte": "1.0.0",
+		"@types/snowpack-env": "^2.3.3",
 		"babel-loader": "8.2.2",
 		"ejs-lint": "1.1.0",
 		"eslint": "7.20.0",
@@ -33,20 +33,16 @@
 		"prettier": "2.2.1",
 		"prettier-plugin-svelte": "2.1.6",
 		"pretty-quick": "3.1.0",
-		"rollup": "2.3.4",
-		"rollup-plugin-livereload": "2.0.0",
-		"rollup-plugin-svelte": "latest",
-		"rollup-plugin-terser": "7.0.0",
-		"svelte": "3.33.0",
+		"snowpack": "^3.0.1",
 		"svelte-check": "1.0.0",
 		"svelte-loader": "3.0.0",
+		"svelte-preprocess": "4.0.0",
 		"svelte-themer": "0.4.3",
-		"tslib": "2.0.0"
+		"tslib": "2.0.0",
+		"typescript": "3.9.3"
 	},
 	"dependencies": {
-		"sirv-cli": "1.0.0",
-		"svelte-preprocess": "4.0.0",
-		"typescript": "3.9.3"
+		"svelte": "3.33.0"
 	},
 	"husky": {
 		"hooks": {
