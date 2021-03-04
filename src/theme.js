@@ -7,6 +7,7 @@ const Themes = {
 			boldaccent: '#BD897E',
 			boldtext: '#ab5247',
 			alternate: '#95A78D',
+			alternatetext: '#537742',
 		},
 		fonts: {
 			header: "'Ubuntu Mono', monospace",

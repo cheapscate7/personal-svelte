@@ -2,10 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 body {
-	/* background-color: var(--theme-light-colours-white); */
 	font-family: var(--theme-light-fonts-body);
 }
 
 p {
 	letter-spacing: 0.3px;
+}
+
+.rich-text h2 {
+	margin: 0 0 0;
+	letter-spacing: 0.5px;
+	font-size: 1.1rem;
+}
+
+.rich-text p {
+	margin: 16px 0 0 16px;
+	line-height: 1.2;
+	font-size: 0.9rem;
+}
+
+/* .rich-text p + p {
+	margin-top: 8px;
+} */
+
+.rich-text p:last-child {
+	margin-bottom: 32px;
+}
+
+.rich-text strong:nth-of-type(1n) {
+	color: var(--theme-light-colours-alternatetext);
+}
+
+.rich-text strong:nth-of-type(2n) {
+	color: var(--theme-light-colours-boldtext);
 }
