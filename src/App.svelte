@@ -6,6 +6,7 @@
 	import Layout from './components/Layout.svelte';
 	import Container from './components/Container.svelte';
 	import Model from './components/Model.svelte';
+	import Outline from './components/Outline.svelte';
 
 	let page: Page;
 	let jobs: Job[];
@@ -29,11 +30,13 @@
 
 	.jobs-grid {
 		display: grid;
-		grid-template-columns: repeat( auto-fill, minmax(200px, 1fr) );
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		column-gap: 8px;
 		row-gap: 16px;
 		justify-items: center;
-		align-items:baseline;
+		align-items: flex-start;
+		transition: all 200ms ease;
+		margin: 32px 0 0;
 
 		@media (min-width: 768px) {
 			column-gap: 24px;
@@ -45,19 +48,22 @@
 	<section class="segment">
 		{#each page.segments as segment}
 			<Container>
-				<h2>{segment.title}</h2>
-				{#each segment.blob as paragraph}
-					{@html toHTML(paragraph)}
-				{/each}
+				<div class="rich-text">
+					<Outline><h2>{segment.title}</h2></Outline>
+					{#each segment.blob as paragraph}
+						{@html toHTML(paragraph)}
+					{/each}
+				</div>
 			</Container>
 		{/each}
 	</section>
 
 	<section class="segment">
 		<Container full>
+			<h2>Where have I worked?</h2>
 			<div class="jobs-grid">
 				{#each jobs as job}
-					<Model name={job.company_name} subtitle={job.position}>
+					<Model name={job.company_name} subtitle={job.position} imageSrc={job.image_src}>
 						<span slot="italicised">{job.duration[0]} - {job.duration[1] || 'present'}</span>
 						<span slot="body">{job.description}</span>
 					</Model>

@@ -11,7 +11,7 @@
 
 <style lang="less">
 	nav {
-		padding: 40px 0;
+		padding: 40px 0 32px;
 	}
 	main {
 		margin: 40px 0;

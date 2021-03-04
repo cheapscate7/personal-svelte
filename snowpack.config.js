@@ -1,4 +1,5 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
@@ -8,13 +9,19 @@ module.exports = {
 	},
 	plugins: [
 		'@snowpack/plugin-svelte',
-		'@snowpack/plugin-dotenv',
 		'@snowpack/plugin-typescript',
-		'@snowpack/plugin-optimize',
 		[
 			'@snowpack/plugin-webpack',
 			{
 				htmlMinifierOptions: true,
+				// extendConfig: config => {
+				// 	config.plugins.push(new MiniCssExtractPlugin());
+				// 	config.module.rules.push({
+				// 		test: /\.css$/i,
+				// 		use: [MiniCssExtractPlugin.loader, 'css-loader'],
+				// 	});
+				// 	return config;
+				// },
 			},
 		],
 	],

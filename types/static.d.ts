@@ -83,3 +83,8 @@ declare interface Page {
 		blob: string[];
 	}[];
 }
+
+declare interface HighlightListItem {
+	label: string;
+	onClick?: () => void;
+}
