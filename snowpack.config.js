@@ -14,14 +14,6 @@ module.exports = {
 			'@snowpack/plugin-webpack',
 			{
 				htmlMinifierOptions: true,
-				// extendConfig: config => {
-				// 	config.plugins.push(new MiniCssExtractPlugin());
-				// 	config.module.rules.push({
-				// 		test: /\.css$/i,
-				// 		use: [MiniCssExtractPlugin.loader, 'css-loader'],
-				// 	});
-				// 	return config;
-				// },
 			},
 		],
 	],
