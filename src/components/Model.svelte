@@ -129,7 +129,7 @@
 		</div>
 	</div>
 	{#if !(bodyHeight < 150)}
-		<button class="expand-button" on:click={toggleExpand}>
+		<button class="expand-button" on:click={toggleExpand} aria-label="expand model button">
 			<Chevron width={8} height={8} direction={expanded ? 'top' : 'bottom'} />
 		</button>
 	{/if}
