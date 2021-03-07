@@ -28,7 +28,11 @@
 
 <style lang="less">
 	.segment + .segment {
-		margin: 80px 0 0;
+		margin: 40px 0 0;
+
+		@media (min-width: 768px ) {
+			margin: 80px 0 0;
+		}
 	}
 
 	.jobs-grid {

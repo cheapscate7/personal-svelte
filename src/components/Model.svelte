@@ -80,6 +80,7 @@
 		box-sizing: content-box;
 		margin: 0 0 8px;
 		font-size: 0.9rem;
+		transition: max-height 400ms ease;
 	}
 
 	.body.expanded {
@@ -132,4 +133,5 @@
 			<Chevron width={8} height={8} direction={expanded ? 'top' : 'bottom'} />
 		</button>
 	{/if}
+	{#if false}<slot></slot>{/if}
 </article>

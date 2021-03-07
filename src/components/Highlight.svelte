@@ -13,8 +13,7 @@
 <style lang="less">
 	.container {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		flex-direction: column-reverse;
 		width: 100%;
 		padding: 16px 40px;
 		box-sizing: border-box;
@@ -22,12 +21,24 @@
 		border-radius: 3px;
 		box-shadow: var(--theme-light-boxshadows-1);
 
+		@media (min-width: 768px ) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
 		.text-container {
-			width: (7/12 * 100%);
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
             letter-spacing: 0.3px;
+			margin: 32px 0 0;
+
+			@media (min-width: 786px ) {
+				width: (7/12 * 100%);
+				margin: 0;
+			}
 
 			h2 {
 				font-family: var(--theme-light-fonts-header);
