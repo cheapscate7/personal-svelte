@@ -5,7 +5,7 @@
 	export let height = 13;
 	export let fill = '#000000';
 
-	$: svgStyle = `width: ${width}; height: ${height};`;
+	$: svgStyle = `width: ${width}px; height: ${height}px;`;
 </script>
 
 <svg

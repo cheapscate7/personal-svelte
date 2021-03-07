@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	export type ColorType = 'red' | 'white';
+	export type ColorType = 'red' | 'white' | 'green';
 </script>
 
 <script lang="ts">
@@ -29,9 +29,14 @@
 			background-color: white;
 			color: var(--theme-light-colours-bold);
 		}
+
+		&.green {
+			background-color: var(--theme-light-colours-alternate);
+			color: white;
+		}
 	}
 </style>
 
-<div class="outline-container" class:red={colorType === 'red'} class:white={colorType === 'white'}>
+<div class="outline-container" class:red={colorType === 'red'} class:white={colorType === 'white'} class:green={colorType === 'green'}>
 	<slot />
 </div>

@@ -14,8 +14,8 @@
 		a {
 			cursor: pointer;
 			display: flex;
-            text-decoration: none;
-            color: black;
+			text-decoration: none;
+			color: black;
 		}
 
 		.circle {
@@ -30,7 +30,7 @@
 		span {
 			margin-left: 16px;
 			letter-spacing: 0;
-			line-height: 16px;
+			font-size: .9rem;
 		}
 
 		&:hover {
