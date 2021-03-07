@@ -5,7 +5,7 @@
 	export let title: string = '';
 	export let imageSrc: string = '';
 	export let highlightTitle: string = '';
-	export let highlightList: HighlightListItem[] = [];
+	export let highlightList: ActionItem[] = [];
 
 	const defaultImage = '/image-not-found.png';
 </script>
@@ -21,7 +21,7 @@
 		border-radius: 3px;
 		box-shadow: var(--theme-light-boxshadows-1);
 
-		@media (min-width: 768px ) {
+		@media (min-width: 768px) {
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
@@ -32,10 +32,10 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
-            letter-spacing: 0.3px;
+			letter-spacing: 0.3px;
 			margin: 32px 0 0;
 
-			@media (min-width: 786px ) {
+			@media (min-width: 786px) {
 				width: (7/12 * 100%);
 				margin: 0;
 			}

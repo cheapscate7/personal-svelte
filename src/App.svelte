@@ -78,7 +78,7 @@
 
 	<section class="segment">
 		<Container full>
-			<h2>Where have I worked?</h2>
+			<Outline colorType="green"><h2>Where have I worked?</h2></Outline>
 			<div class="jobs-grid">
 				{#each jobs as job}
 					<Model name={job.company_name} subtitle={job.position} imageSrc={job.image_src}>

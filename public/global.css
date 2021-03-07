@@ -5,16 +5,21 @@ body {
 	font-family: var(--theme-light-fonts-body);
 }
 
-p, span {
+p,
+span {
 	letter-spacing: 0.3px;
-	font-size: .9rem;
+	font-size: 0.9rem;
 }
 
-h2, h3 {
+h2,
+h3 {
 	font-size: 1.1rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+h4 {
 	margin: 0;
 }
 
