@@ -1,9 +1,9 @@
 <script lang="ts" context="module">
-	export type ColorType = "red" | "white";
+	export type ColorType = 'red' | 'white';
 </script>
 
 <script lang="ts">
-	export let colorType: ColorType = "red";
+	export let colorType: ColorType = 'red';
 </script>
 
 <style lang="less">

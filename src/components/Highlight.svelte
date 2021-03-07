@@ -1,6 +1,6 @@
 <script lang="typescript">
 	import HighlightList from './HighlightList.svelte';
-    import Outline from './Outline.svelte';
+	import Outline from './Outline.svelte';
 
 	export let title: string = '';
 	export let imageSrc: string = '';
@@ -24,22 +24,22 @@
 
 		.text-container {
 			width: (7/12 * 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+            letter-spacing: 0.3px;
 
-            h2 {
-                font-family: var(--theme-light-fonts-header);
-                margin: 0;
-            }
+			h2 {
+				font-family: var(--theme-light-fonts-header);
+				margin: 0;
+			}
 		}
 
 		img {
-			// width: (5/12 * 100%);
 			box-shadow: var(--theme-light-boxshadows-1);
 			max-height: 480px;
 			object-fit: contain;
-            border-radius: 3px;
+			border-radius: 3px;
 		}
 	}
 </style>

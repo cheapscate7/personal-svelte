@@ -53,6 +53,11 @@
 
 	.outline-container {
 		margin: auto;
+		max-width: calc(11/12 *100%);
+
+		.subtitle {
+			font-size: 0.7rem;
+		}
 	}
 
 	.content {
@@ -110,7 +115,7 @@
 	<img src={imageSrc || defaultImage} alt={name} />
 	<h3>{title}</h3>
 	<div class="outline-container">
-		<Outline><p>{subtitle}</p></Outline>
+		<Outline><p class="subtitle">{subtitle}</p></Outline>
 	</div>
 	<div class="content">
 		{#if $$slots.italicised}
