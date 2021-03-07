@@ -1,7 +1,13 @@
-<style>
+<script lang="ts" context="module">
+	export type ColorType = 'red' | 'white';
+</script>
+
+<script lang="ts">
+	export let colorType: ColorType = 'red';
+</script>
+
+<style lang="less">
 	.outline-container {
-		background-color: var(--theme-light-colours-bold);
-		color: white;
 		display: inline-block;
 		width: max-content;
 		height: max-content;
@@ -13,9 +19,19 @@
 		letter-spacing: 1px;
 		font-family: var(--theme-light-fonts-header);
 		max-width: 100%;
+
+		&.red {
+			background-color: var(--theme-light-colours-bold);
+			color: white;
+		}
+
+		&.white {
+			background-color: white;
+			color: var(--theme-light-colours-bold);
+		}
 	}
 </style>
 
-<div class="outline-container">
+<div class="outline-container" class:red={colorType === 'red'} class:white={colorType === 'white'}>
 	<slot />
 </div>

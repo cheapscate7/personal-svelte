@@ -19,7 +19,7 @@
 </style>
 
 <svelte:head>
-	<title>{title} Ramona Harrison - Frontend Webdeveloper</title>
+	<title>{title} | Ramona Harrison - Frontend Webdeveloper</title>
 </svelte:head>
 
 <ThemeWrapper themes={Themes}>

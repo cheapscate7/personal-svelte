@@ -7,6 +7,9 @@
 	import Container from './components/Container.svelte';
 	import Model from './components/Model.svelte';
 	import Outline from './components/Outline.svelte';
+	import Highlight from './components/Highlight.svelte';
+
+	import Skills from '../mocks/skills';
 
 	let page: Page;
 	let jobs: Job[];
@@ -25,7 +28,11 @@
 
 <style lang="less">
 	.segment + .segment {
-		margin: 80px 0 0;
+		margin: 40px 0 0;
+
+		@media (min-width: 768px ) {
+			margin: 80px 0 0;
+		}
 	}
 
 	.jobs-grid {
@@ -45,6 +52,17 @@
 </style>
 
 <Layout title="🏡" loading={!page || !jobs}>
+	<section class="segment">
+		<container full>
+			<Highlight title={page.overview.title} imageSrc="/IMG_20200923_182129.jpg" highlightTitle="Skills + Stack" highlightList={Skills}>
+				<div slot="body">
+					{#each page.overview.blob as paragraph}
+						<p>{@html toHTML(paragraph)}</p>
+					{/each}
+				</div>
+			</Highlight>
+		</container>
+	</section>
 	<section class="segment">
 		{#each page.segments as segment}
 			<Container>

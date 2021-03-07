@@ -10,7 +10,7 @@
 	h1 {
 		color: var(--theme-light-colours-boldtext);
 		margin: 16px 0 8px;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		font-family: var(--theme-light-fonts-title);
 		letter-spacing: 1.5px;
 
@@ -23,7 +23,7 @@
 		}
 	}
 	h2 {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		color: var(--theme-light-colours-alternate);
 		font-family: var(--theme-light-fonts-header);
 		text-decoration: underline;

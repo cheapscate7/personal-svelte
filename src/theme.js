@@ -15,6 +15,9 @@ const Themes = {
 			body:
 				"-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol'",
 		},
+		boxshadows: {
+			1: '0px 0px 10px 5px rgba(100, 100, 100, 0.1)',
+		},
 	},
 };
 

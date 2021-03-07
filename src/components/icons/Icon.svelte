@@ -4,7 +4,6 @@
 	export let width = 13;
 	export let height = 13;
 	export let fill = '#000000';
-	console.log(fill);
 
 	$: svgStyle = `width: ${width}; height: ${height};`;
 </script>

@@ -5,14 +5,23 @@ body {
 	font-family: var(--theme-light-fonts-body);
 }
 
-p {
+p, span {
 	letter-spacing: 0.3px;
+	font-size: .9rem;
+}
+
+h2, h3 {
+	font-size: 1.1rem;
+}
+
+h1, h2, h3 {
+	margin: 0;
 }
 
 .rich-text h2 {
 	margin: 0 0 0;
 	letter-spacing: 0.5px;
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 }
 
 .rich-text p {
@@ -20,10 +29,6 @@ p {
 	line-height: 1.2;
 	font-size: 0.9rem;
 }
-
-/* .rich-text p + p {
-	margin-top: 8px;
-} */
 
 .rich-text p:last-child {
 	margin-bottom: 32px;

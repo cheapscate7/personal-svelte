@@ -1,5 +1,6 @@
 <script lang="typescript">
 	import Check from './icons/Check.svelte';
+	import Outline from './Outline.svelte';
 
 	export let highlights: HighlightListItem[] = [];
 	export let title: string = '';
@@ -8,55 +9,52 @@
 
 <style lang="less">
 	h3 {
-		font-family: var(--theme-light-fonts-header);
 		font-size: 1.1rem;
-		text-decoration: underline;
-        max-width: 320px;
+		max-width: 320px;
+		font-family: var(--theme-light-fonts-header);
+		margin: 0;
 	}
 
 	ul {
 		list-style-type: none;
-		margin: 0;
+		margin: 16px 0 0;
 		padding: 0;
-		font-family: var(--theme-light-fonts-header);
 	}
 
-    li {
-			display: flex;
-			align-items: center;
-			max-width: 320px;
-			transition: all 200ms ease;
+	li {
+		display: flex;
+		align-items: center;
+		max-width: 320px;
+		transition: all 200ms ease;
 
-			&:hover {
-				max-width: 322px;
-			}
+		&:hover {
+			max-width: 322px;
+		}
 
-            
-			& + & {
-				margin-top: 8px;
-			}
+		& + & {
+			margin-top: 8px;
+		}
 
-			&:hover {
-				span {
-					margin-left: 10px;
-				}
-			}
-
-			.icon-container {
-				flex-shrink: 1;
-			}
-
+		&:hover {
 			span {
-				line-height: 16px;
-				margin-left: 8px;
-				letter-spacing: 0.3px;
-				transition: margin 200ms ease;
-				font-weight: bold;
+				margin-left: 24px;
 			}
 		}
+
+		.icon-container {
+			flex-shrink: 1;
+		}
+
+		span {
+			line-height: 16px;
+			margin-left: 16px;
+			letter-spacing: 0.3px;
+			transition: margin 200ms ease;
+		}
+	}
 </style>
 
-<h3>{title}</h3>
+<Outline colorType="white"><h3>{title}</h3></Outline>
 
 <ul>
 	{#each highlights as highlight}

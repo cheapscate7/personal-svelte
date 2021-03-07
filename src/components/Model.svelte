@@ -53,6 +53,11 @@
 
 	.outline-container {
 		margin: auto;
+		max-width: calc(11/12 *100%);
+
+		.subtitle {
+			font-size: 0.7rem;
+		}
 	}
 
 	.content {
@@ -75,6 +80,7 @@
 		box-sizing: content-box;
 		margin: 0 0 8px;
 		font-size: 0.9rem;
+		transition: max-height 400ms ease;
 	}
 
 	.body.expanded {
@@ -110,7 +116,7 @@
 	<img src={imageSrc || defaultImage} alt={name} />
 	<h3>{title}</h3>
 	<div class="outline-container">
-		<Outline><p>{subtitle}</p></Outline>
+		<Outline><p class="subtitle">{subtitle}</p></Outline>
 	</div>
 	<div class="content">
 		{#if $$slots.italicised}
@@ -127,4 +133,5 @@
 			<Chevron width={8} height={8} direction={expanded ? 'top' : 'bottom'} />
 		</button>
 	{/if}
+	{#if false}<slot></slot>{/if}
 </article>
