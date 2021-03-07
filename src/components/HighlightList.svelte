@@ -2,7 +2,7 @@
 	import Check from './icons/Check.svelte';
 	import Outline from './Outline.svelte';
 
-	export let highlights: HighlightListItem[] = [];
+	export let highlights: ActionItem[] = [];
 	export let title: string = '';
 	export let color: string = 'black';
 </script>
