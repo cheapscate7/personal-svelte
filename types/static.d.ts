@@ -84,7 +84,12 @@ declare interface Page {
 	}[];
 }
 
-declare interface HighlightListItem {
+declare interface ActionItem {
 	label: string;
 	onClick?: () => void;
+}
+
+declare interface LinkItem {
+	label: string;
+	link: string;
 }

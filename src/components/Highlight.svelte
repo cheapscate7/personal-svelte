@@ -5,7 +5,7 @@
 	export let title: string = '';
 	export let imageSrc: string = '';
 	export let highlightTitle: string = '';
-	export let highlightList: HighlightListItem[] = [];
+	export let highlightList: ActionItem[] = [];
 
 	const defaultImage = '/image-not-found.png';
 </script>
