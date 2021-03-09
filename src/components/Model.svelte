@@ -1,4 +1,4 @@
-<script>
+<script lang="typescript">
 	import Chevron from './icons/Chevron.svelte';
 	import Outline from './Outline.svelte';
 
@@ -6,6 +6,7 @@
 	export let name = '';
 	export let title = '';
 	export let subtitle = '';
+	export let text3: string[] = [];
 
 	let bodyHeight;
 	const defaultImage = '/image-not-found.png';
@@ -126,6 +127,14 @@
 		{/if}
 		<div class="body" class:expanded bind:offsetHeight={bodyHeight}>
 			<slot name="body" />
+			{#if text3 && text3.length > 0}
+				<div class="italicised">
+					<span>Worked with: </span>
+					{#each text3 as worked_with}
+						<span>{worked_with} </span>
+					{/each}
+				</div>
+			{/if}
 		</div>
 	</div>
 	{#if !(bodyHeight < 150)}

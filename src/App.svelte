@@ -81,9 +81,9 @@
 			<Outline colorType="green"><h2>Where have I worked?</h2></Outline>
 			<div class="jobs-grid">
 				{#each jobs as job}
-					<Model name={job.company_name} subtitle={job.position} imageSrc={job.image_src}>
+					<Model name={job.company_name} subtitle={job.position} imageSrc={job.image_src} text3={job.worked_with}>
 						<span slot="italicised">{job.duration[0]} - {job.duration[1] || 'present'}</span>
-						<span slot="body">{job.description}</span>
+						<span slot="body">{@html toHTML(job.description)}</span>
 					</Model>
 				{/each}
 			</div>
