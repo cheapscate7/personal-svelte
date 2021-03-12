@@ -24,11 +24,11 @@
 	li {
 		display: flex;
 		align-items: center;
-		max-width: 320px;
+		max-width: 71ch;
 		transition: all 200ms ease;
 
 		&:hover {
-			max-width: 322px;
+			max-width: calc(71ch + 2px);
 		}
 
 		& + & {
@@ -54,13 +54,15 @@
 	}
 </style>
 
-<Outline colorType="white"><h3>{title}</h3></Outline>
+<div>
+	<Outline colorType="white"><h3>{title}</h3></Outline>
 
-<ul>
-	{#each highlights as highlight}
-		<li>
-			<div class="icon-container"><Check width={16} height={16} fill={color} /></div>
-			<span style={`color: ${color};`}>{highlight.label}</span>
-		</li>
-	{/each}
-</ul>
+	<ul>
+		{#each highlights as highlight}
+			<li>
+				<div class="icon-container"><Check width={16} height={16} fill={color} /></div>
+				<span style={`color: ${color};`}>{highlight.label}</span>
+			</li>
+		{/each}
+	</ul>
+</div>

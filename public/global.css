@@ -23,6 +23,11 @@ h4 {
 	margin: 0;
 }
 
+.rich-text {
+	max-width: 71ch;
+	margin: auto;
+}
+
 .rich-text h2 {
 	margin: 0 0 0;
 	letter-spacing: 0.5px;

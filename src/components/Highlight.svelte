@@ -25,9 +25,10 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+			gap: 32px;
 		}
 
-		.text-container {
+		.highlights-container {
 			width: 100%;
 			display: flex;
 			flex-direction: column;
@@ -38,6 +39,16 @@
 			@media (min-width: 786px) {
 				width: (7/12 * 100%);
 				margin: 0;
+			}
+
+			@media (min-width: 1284px) {
+				flex-direction: row;
+				align-items: center;
+				gap: 80px;
+			}
+
+			.text-container {
+				max-width: 71ch;
 			}
 
 			h2 {
@@ -56,9 +67,11 @@
 </style>
 
 <div class="container">
-	<div class="text-container">
-		<Outline colorType="white"><h2>{title}</h2></Outline>
-		<slot name="body" />
+	<div class="highlights-container">
+		<div class="text-container">
+			<Outline colorType="white"><h2>{title}</h2></Outline>
+			<slot name="body" />
+		</div>
 		<HighlightList title={highlightTitle} highlights={highlightList} />
 	</div>
 	<img src={imageSrc || defaultImage} alt={`Highlight ${title} - Image`} />
