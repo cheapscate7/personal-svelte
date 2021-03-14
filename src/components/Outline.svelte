@@ -4,11 +4,12 @@
 
 <script lang="ts">
 	export let colorType: ColorType = 'red';
+	export let small: boolean = false;
 </script>
 
 <style lang="less">
 	.outline-container {
-		display: inline-block;
+		display: inline-flex;
 		width: max-content;
 		height: max-content;
 		font-weight: 700;
@@ -34,9 +35,13 @@
 			background-color: var(--theme-light-colours-alternate);
 			color: white;
 		}
+
+		&.small {
+			padding: 8px;
+		}
 	}
 </style>
 
-<div class="outline-container" class:red={colorType === 'red'} class:white={colorType === 'white'} class:green={colorType === 'green'}>
+<div class="outline-container" class:red={colorType === 'red'} class:white={colorType === 'white'} class:green={colorType === 'green'} class:small>
 	<slot />
 </div>

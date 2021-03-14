@@ -57,7 +57,7 @@
 			<Highlight title={page.overview.title} imageSrc="/IMG_20200923_182129.jpg" highlightTitle="Skills + Stack" highlightList={Skills}>
 				<div slot="body">
 					{#each page.overview.blob as paragraph}
-						<p>{@html toHTML(paragraph)}</p>
+						{@html toHTML(paragraph)}
 					{/each}
 				</div>
 			</Highlight>

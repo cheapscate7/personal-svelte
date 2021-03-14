@@ -27,8 +27,20 @@
 		max-width: 71ch;
 		transition: all 200ms ease;
 
-		&:hover {
-			max-width: calc(71ch + 2px);
+		.icon-container {
+			background-color: white;
+			padding: 8px;
+			display: inline-flex;
+		}
+
+		.label {
+			display: inline-flex;
+			padding: 0 8px;
+			line-height: 24px;
+			margin: 0;
+			background-color: var(--theme-light-colours-bold);
+			color: white;
+			transition: padding-left 200ms ease;
 		}
 
 		& + & {
@@ -36,21 +48,11 @@
 		}
 
 		&:hover {
-			span {
-				margin-left: 24px;
+			.label {
+				padding-left: 10px;
 			}
 		}
-
-		.icon-container {
-			flex-shrink: 1;
-		}
-
-		span {
-			line-height: 16px;
-			margin-left: 16px;
-			letter-spacing: 0.3px;
-			transition: margin 200ms ease;
-		}
+		
 	}
 </style>
 
@@ -60,8 +62,8 @@
 	<ul>
 		{#each highlights as highlight}
 			<li>
-				<div class="icon-container"><Check width={16} height={16} fill={color} /></div>
-				<span style={`color: ${color};`}>{highlight.label}</span>
+				<div class="icon-container"><Check width={8} height={8} fill="#f87666" /></div>
+				<p class="label">{highlight.label}</p>
 			</li>
 		{/each}
 	</ul>
