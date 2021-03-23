@@ -28,7 +28,7 @@
 		transition: all 200ms ease;
 
 		.icon-container {
-			background-color: white;
+			background-color: var(--theme-colours-primary-text);
 			padding: 8px;
 			display: inline-flex;
 		}
@@ -38,8 +38,8 @@
 			padding: 0 8px;
 			line-height: 24px;
 			margin: 0;
-			background-color: var(--theme-light-colours-bold);
-			color: white;
+			background-color: var(--theme-colours-primary-text);
+			color: var(--theme-colours-primary-bold);
 			transition: padding-left 200ms ease;
 		}
 
@@ -57,12 +57,12 @@
 </style>
 
 <div>
-	<Outline colorType="white"><h3>{title}</h3></Outline>
+	<Outline><h3>{title}</h3></Outline>
 
 	<ul>
 		{#each highlights as highlight}
 			<li>
-				<div class="icon-container"><Check width={8} height={8} fill="#f87666" /></div>
+				<div class="icon-container"><Check width={8} height={8} fill="var(--theme-colours-primary-background)" /></div>
 				<p class="label">{highlight.label}</p>
 			</li>
 		{/each}

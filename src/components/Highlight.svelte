@@ -17,7 +17,7 @@
 		width: 100%;
 		padding: 16px 40px;
 		box-sizing: border-box;
-		background-color: var(--theme-light-colours-whiteaccent);
+		background-color: var(--theme-light-colours-white);
 		border-radius: 3px;
 		box-shadow: var(--theme-light-boxshadows-1);
 
@@ -69,7 +69,7 @@
 <div class="container">
 	<div class="highlights-container">
 		<div class="text-container">
-			<Outline colorType="white"><h2>{title}</h2></Outline>
+			<Outline><h2>{title}</h2></Outline>
 			<slot name="body" />
 		</div>
 		<HighlightList title={highlightTitle} highlights={highlightList} />

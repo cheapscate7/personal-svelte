@@ -1,47 +1,47 @@
 <script lang="ts" context="module">
-	export type ColorType = 'red' | 'white' | 'green';
+	export type ColorType = 'primary' | 'secondary';
 </script>
 
 <script lang="ts">
-	export let colorType: ColorType = 'red';
-	export let small: boolean = false;
+	export let colorType: ColorType = 'primary';
+	export let inverse: boolean = false;
 </script>
 
 <style lang="less">
 	.outline-container {
 		display: inline-flex;
-		width: max-content;
-		height: max-content;
 		font-weight: 700;
 		font-size: 0.7rem;
 		padding: 8px 16px;
-		vertical-align: baseline;
 		box-sizing: border-box;
 		letter-spacing: 1px;
 		font-family: var(--theme-light-fonts-header);
 		max-width: 100%;
 
-		&.red {
-			background-color: var(--theme-light-colours-bold);
-			color: white;
+		&.primary {
+			background-color: var(--theme-colours-primary-background);
+			color: var(--theme-colours-primary-text);
 		}
 
-		&.white {
-			background-color: white;
-			color: var(--theme-light-colours-bold);
+		&.secondary {
+			background-color: var(--theme-colours-secondary-background);
+			color: var(--theme-colours-secondary-text);
 		}
 
-		&.green {
-			background-color: var(--theme-light-colours-alternate);
-			color: white;
-		}
+		&.inverse {
+			&.primary {
+				background-color: var(--theme-colours-primary-text);
+				color: var(--theme-colours-primary-background);
+			}
 
-		&.small {
-			padding: 8px;
+			&.secondary {
+				background-color: var(--theme-colours-secondary-text);
+				color: var(--theme-colours-secondary-background);
+			}
 		}
 	}
 </style>
 
-<div class="outline-container" class:red={colorType === 'red'} class:white={colorType === 'white'} class:green={colorType === 'green'} class:small>
+<div class="outline-container" class:primary={colorType === 'primary'} class:secondary={colorType === 'secondary'} class:inverse>
 	<slot />
 </div>

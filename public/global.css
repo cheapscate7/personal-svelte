@@ -3,6 +3,7 @@
 
 body {
 	font-family: var(--theme-light-fonts-body);
+	color: var(--theme-light-colours-black);
 }
 
 p,
@@ -45,9 +46,9 @@ h4 {
 }
 
 .rich-text strong:nth-of-type(1n) {
-	color: var(--theme-light-colours-alternatetext);
+	color: var(--theme-light-colours-primary-bold);
 }
 
 .rich-text strong:nth-of-type(2n) {
-	color: var(--theme-light-colours-boldtext);
+	color: var(--theme-light-colours-secondary-bold);
 }

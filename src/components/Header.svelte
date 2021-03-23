@@ -7,12 +7,16 @@
 </script>
 
 <style lang="less">
+	span  {
+		font-size: 1rem;
+	}
+
 	h1 {
-		color: var(--theme-light-colours-boldtext);
 		margin: 16px 0 8px;
-		font-size: 2rem;
+		font-size: 3.5rem;
 		font-family: var(--theme-light-fonts-title);
 		letter-spacing: 1.5px;
+		color: var(--theme-colours-primary-background);
 
 		&.noOutline {
 			margin-top: 0;
@@ -23,8 +27,7 @@
 		}
 	}
 	h2 {
-		font-size: 1rem;
-		color: var(--theme-light-colours-alternate);
+		font-size: 1.25rem;
 		font-family: var(--theme-light-fonts-header);
 		text-decoration: underline;
 		margin: 0;
@@ -33,7 +36,7 @@
 </style>
 
 {#if outline}
-	<Outline>{outline}</Outline>
+	<Outline><span>{outline}</span></Outline>
 {/if}
 <h1 class:noOutline={!outline} class:noUnderline={!underline}>{title}</h1>
 {#if underline}

@@ -1,13 +1,18 @@
 const Themes = {
 	light: {
 		colours: {
-			white: '#EEEBE7',
-			whiteaccent: '#C8C6AF',
-			bold: '#F87666',
-			boldaccent: '#BD897E',
-			boldtext: '#ab5247',
-			alternate: '#95A78D',
-			alternatetext: '#537742',
+			white: '#E8E9EB',
+			black: '#313638',
+			primary: {
+				text: 'white',
+				background: '#E23C12',
+				bold: '#a72f11'
+			},
+			secondary: {
+				text: '#104859',
+				background: '#DAEDF2',
+				bold: '#104859'
+			}
 		},
 		fonts: {
 			header: "'Ubuntu Mono', monospace",

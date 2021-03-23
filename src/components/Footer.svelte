@@ -7,7 +7,7 @@
 
 <style lang="less">
 	.container {
-		background-color: var(--theme-light-colours-white);
+		background-color: var(--theme-colours-white);
 		padding: 40px 24px;
 		box-sizing: border-box;
 		display: flex;
@@ -25,14 +25,14 @@
         }
 
 		p {
-			color: #696763;
+			color: lighten(#313638, 30%);
 			font-size: 0.6rem;
 		}
 	}
 </style>
 
 <div class="container">
-	<Outline colorType="white"><h4>Find Me:</h4></Outline>
+	<Outline><h4>Find Me:</h4></Outline>
 	<div class="social-container"><Social {socialLinks} /></div>
 	<p>Created by Ramona Harrison</p>
 </div>

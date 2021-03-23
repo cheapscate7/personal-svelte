@@ -43,7 +43,7 @@
 		font-size: 1.2rem;
 		letter-spacing: 0.75px;
 		font-weight: 700;
-		color: var(--theme-light-colours-boldtext);
+		color: black;
 		margin: 16px auto 8px;
 		font-family: var(--theme-light-fonts-header);
 	}
@@ -54,7 +54,6 @@
 
 	.outline-container {
 		margin: auto;
-		max-width: calc(11/12 *100%);
 
 		.subtitle {
 			font-size: 0.7rem;
@@ -100,16 +99,17 @@
 		align-items: center;
 		justify-content: center;
 		border: 1px solid transparent;
-		color: var(--theme-light-colours-boldtext);
-	}
+		background-color: var(--theme-colours-white);
+		color: var(--theme-colours-black);
 
-	.expand-button:focus {
-		border: 1px solid var(--theme-light-colours-bold);
-	}
+		&:focus {
+			border: 1px solid var(--theme-colours-black);
+		}
 
-	.expand-button:hover {
-		background-color: var(--theme-light-colours-alternate);
-		color: white;
+		&:hover {
+			background-color: var(--theme-colours-secondary-background);
+			color: var(--theme-colours-secondary-text);
+		}
 	}
 </style>
 

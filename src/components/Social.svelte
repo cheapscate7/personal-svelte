@@ -35,16 +35,16 @@
 
 		&:hover {
 			.circle {
-				background-color: var(--theme-light-colours-bold);
-				border: 1px solid var(--theme-light-colours-bold);
+				background-color: var(--theme-light-colours-primary-background);
+				border: 1px solid var(--theme-light-colours-primary-background);
 			}
 		}
 
 		&:nth-last-of-type(2n) {
 			&:hover {
 				.circle {
-					background-color: var(--theme-light-colours-alternate);
-					border: 1px solid var(--theme-light-colours-alternate);
+					background-color: var(--theme-light-colours-secondary-background);
+					border: 1px solid var(--theme-light-colours-secondary-background);
 				}
 			}
 		}
