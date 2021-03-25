@@ -45,7 +45,7 @@
 		font-weight: 700;
 		color: black;
 		margin: 16px auto 8px;
-		font-family: var(--theme-light-fonts-header);
+		font-family: var(--theme-fonts-header);
 	}
 
 	p {
@@ -107,8 +107,8 @@
 		}
 
 		&:hover {
-			background-color: var(--theme-colours-secondary-background);
-			color: var(--theme-colours-secondary-text);
+			background-color: var(--theme-colours-primary-background);
+			color: var(--theme-colours-primary-text);
 		}
 	}
 </style>

@@ -14,7 +14,7 @@
 	h1 {
 		margin: 16px 0 8px;
 		font-size: 3.5rem;
-		font-family: var(--theme-light-fonts-title);
+		font-family: var(--theme-fonts-title);
 		letter-spacing: 1.5px;
 		color: var(--theme-colours-primary-background);
 
@@ -28,7 +28,7 @@
 	}
 	h2 {
 		font-size: 1.25rem;
-		font-family: var(--theme-light-fonts-header);
+		font-family: var(--theme-fonts-header);
 		text-decoration: underline;
 		margin: 0;
 		line-height: 1.5;

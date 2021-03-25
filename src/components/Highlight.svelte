@@ -17,9 +17,9 @@
 		width: 100%;
 		padding: 16px 40px;
 		box-sizing: border-box;
-		background-color: var(--theme-light-colours-white);
+		background-color: var(--theme-colours-white);
 		border-radius: 3px;
-		box-shadow: var(--theme-light-boxshadows-1);
+		box-shadow: var(--theme-boxshadows-1);
 
 		@media (min-width: 768px) {
 			flex-direction: row;
@@ -52,13 +52,13 @@
 			}
 
 			h2 {
-				font-family: var(--theme-light-fonts-header);
+				font-family: var(--theme-fonts-header);
 				margin: 0;
 			}
 		}
 
 		img {
-			box-shadow: var(--theme-light-boxshadows-1);
+			box-shadow: var(--theme-boxshadows-1);
 			max-height: 480px;
 			object-fit: contain;
 			border-radius: 3px;

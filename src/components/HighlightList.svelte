@@ -11,7 +11,7 @@
 	h3 {
 		font-size: 1.1rem;
 		max-width: 320px;
-		font-family: var(--theme-light-fonts-header);
+		font-family: var(--theme-fonts-header);
 		margin: 0;
 	}
 
@@ -23,7 +23,7 @@
 
 	li {
 		display: flex;
-		align-items: center;
+		align-items: stretch;
 		max-width: 71ch;
 		transition: all 200ms ease;
 
@@ -31,6 +31,7 @@
 			background-color: var(--theme-colours-primary-text);
 			padding: 8px;
 			display: inline-flex;
+			align-items: center;
 		}
 
 		.label {

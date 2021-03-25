@@ -15,7 +15,7 @@
 		padding: 8px 16px;
 		box-sizing: border-box;
 		letter-spacing: 1px;
-		font-family: var(--theme-light-fonts-header);
+		font-family: var(--theme-fonts-header);
 		max-width: 100%;
 
 		&.primary {

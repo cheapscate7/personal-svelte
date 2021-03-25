@@ -29,28 +29,28 @@
 		cursor: not-allowed;
 	}
 	.primary {
-		background-color: var(--theme-light-colours-bold);
+		background-color: var(--theme-colours-bold);
 		color: white;
 	}
 	.primary:hover {
 		background-color: transparent;
-		color: var(--theme-light-colours-bold);
-		border: 1px solid var(--theme-light-colours-bold);
+		color: var(--theme-colours-bold);
+		border: 1px solid var(--theme-colours-bold);
 	}
 	.primary:focus {
-		border: 1px solid var(--theme-light-colours-boldaccent);
+		border: 1px solid var(--theme-colours-boldaccent);
 	}
 	.secondary {
-		background-color: var(--theme-light-colours-alternate);
-		color: var(--theme-light-colours-white);
+		background-color: var(--theme-colours-alternate);
+		color: var(--theme-colours-white);
 	}
 	.secondary:hover {
 		background-color: transparent;
-		color: var(--theme-light-colours-alternate);
-		border: 1px solid var(--theme-light-colours-alternate);
+		color: var(--theme-colours-alternate);
+		border: 1px solid var(--theme-colours-alternate);
 	}
 	.secondary:focus {
-		border: 1px solid var(--theme-light-colours-whiteaccent);
+		border: 1px solid var(--theme-colours-whiteaccent);
 	}
 	.text {
 		font-weight: 400;
@@ -64,7 +64,7 @@
 	}
 
 	.primary.text {
-		color: var(--theme-light-colours-bold);
+		color: var(--theme-colours-bold);
 	}
 	.primary.text:focus {
 		border: 0;
@@ -72,7 +72,7 @@
 	}
 
 	.secondary.text {
-		color: var(--theme-light-colours-alternate);
+		color: var(--theme-colours-alternate);
 	}
 	.secondary.text:focus {
 		border: 0;

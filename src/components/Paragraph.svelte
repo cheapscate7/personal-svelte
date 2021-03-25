@@ -9,10 +9,10 @@
 		font-weight: bold;
 		margin: 0 0 16px;
 		letter-spacing: 0.5px;
-		color: var(--theme-light-colours-boldtext);
+		color: var(--theme-colours-boldtext);
 		display: inline-block;
 		text-transform: uppercase;
-		font-family: var(--theme-light-fonts-header);
+		font-family: var(--theme-fonts-header);
 	}
 	:global(p) {
 		font-size: 1rem;
@@ -29,8 +29,8 @@
 		padding: 0;
 	}
 	.bold {
-		background-color: var(--theme-light-colours-primary-background);
-		color: var(--theme-light-colours-primary-text);
+		background-color: var(--theme-colours-primary-background);
+		color: var(--theme-colours-primary-text);
 	}
 </style>
 
