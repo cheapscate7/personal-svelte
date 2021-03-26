@@ -15,14 +15,14 @@
 			cursor: pointer;
 			display: flex;
 			text-decoration: none;
-			color: black;
+			color: var(--theme-colours-black);
 		}
 
 		.circle {
 			content: '';
 			width: 16px;
 			height: 16px;
-			border: 1px solid black;
+			border: 1px solid var(--theme-colours-black);
 			border-radius: 50%;
 			transition: background-color 400ms ease, border-color 400ms ease;
 		}
@@ -36,7 +36,6 @@
 		&:hover {
 			.circle {
 				background-color: var(--theme-colours-primary-background);
-				border: 1px solid var(--theme-colours-primary-background);
 			}
 		}
 
@@ -44,7 +43,6 @@
 			&:hover {
 				.circle {
 					background-color: var(--theme-colours-secondary-background);
-					border: 1px solid var(--theme-colours-secondary-background);
 				}
 			}
 		}

@@ -8,14 +8,14 @@
 
 <style lang="less">
 	span  {
-		font-size: 1rem;
+		margin: 0 8px;
 	}
 
 	h1 {
-		margin: 16px 0 8px;
+		margin: 24px 0 8px;
 		font-size: 3.5rem;
-		font-family: var(--theme-fonts-title);
-		letter-spacing: 1.5px;
+		letter-spacing: -1.5px;
+    	line-height: 0.9;
 		color: var(--theme-colours-primary-background);
 
 		&.noOutline {
@@ -27,7 +27,7 @@
 		}
 	}
 	h2 {
-		font-size: 1.25rem;
+		font-size: 1.15rem;
 		font-family: var(--theme-fonts-header);
 		text-decoration: underline;
 		margin: 0;
