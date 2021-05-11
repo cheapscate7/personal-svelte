@@ -24,6 +24,9 @@ module.exports = {
 		target: '#svelte',
 
 		vite: {
+			ssr: {
+				noExternal: Object.keys(pkg.dependencies || {})
+			},
 			resolve: {
 				alias: {
 					$utils: path.resolve('./src/utils'),
