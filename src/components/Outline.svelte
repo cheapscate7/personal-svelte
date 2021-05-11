@@ -17,7 +17,7 @@
 		letter-spacing: 1px;
 		font-family: var(--theme-fonts-header);
 		max-width: 100%;
-		text-align: center;
+		// text-align: center;
 
 		&.primary {
 			background-color: var(--theme-colours-primary-background);

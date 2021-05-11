@@ -22,7 +22,7 @@
 		transition: transform 200ms ease;
 		display: inline-flex;
 		flex-direction: column;
-		align-items: stretch;
+		align-items: center;
 		padding: 16px 8px;
 		max-width: 200px;
 		background-color: white;
@@ -52,13 +52,9 @@
 		margin: 0;
 	}
 
-	.outline-container {
-		margin: auto;
-
-		.subtitle {
+	.subtitle {
 			font-size: 0.7rem;
 		}
-	}
 
 	.content {
 		margin-top: 24px;
@@ -88,6 +84,7 @@
 	}
 
 	.expand-button {
+		width: 100%;
 		border: 0;
 		padding: 8px;
 		cursor: pointer;
@@ -116,9 +113,7 @@
 <article class="model-container">
 	<img src={imageSrc || defaultImage} alt={name} />
 	<h3>{title}</h3>
-	<div class="outline-container">
-		<Outline><p class="subtitle">{subtitle}</p></Outline>
-	</div>
+	<Outline><p class="subtitle">{subtitle}</p></Outline>
 	<div class="content">
 		{#if $$slots.italicised}
 			<div class="italicised">
